@@ -1,0 +1,19 @@
+Workflow:
+
+1. Add video to src/
+
+2. Create dataset
+> python make_dataset.py src/VIDEO.mp4 datasets/DATASET
+
+3. Use labelme to label images in datasets/DATASET/images/train and datasets/DATASET/images/val
+
+4. Create YOLO compatible labels
+> python make_labels.py datasets/DATASET
+
+5. Create dataset manifest DATA.yaml with all desired datasets
+
+6. Train model
+> python train.py DATA.yaml models/MODEL.pt
+
+7. Test model
+> python test.py models/MODEL.pt src/VIDEO.mp4 results/OUTPUT.mp4

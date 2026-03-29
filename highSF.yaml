@@ -1,0 +1,10 @@
+path: .
+
+train:
+  - datasets/20251213_WT_10dpf_n6-10_cameraover_highSF/images/train
+
+val:
+  - datasets/20251213_WT_10dpf_n6-10_cameraover_highSF/images/val
+
+nc: 1
+names: ["fish"]
